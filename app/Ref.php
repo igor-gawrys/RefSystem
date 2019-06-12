@@ -27,6 +27,6 @@ class Ref extends Model
         
         return 'slug';
         
-     }
+    }
     
 }
