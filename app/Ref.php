@@ -21,4 +21,12 @@ class Ref extends Model
         "last_visited_at"
 
     ];
+    
+    function getRouteKeyName()
+    {
+        
+        return 'slug';
+        
+     }
+    
 }
