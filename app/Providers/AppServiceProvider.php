@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         
-       Ref::observe( new RefObserver );
+       //
         
     }
 
@@ -29,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
+        Ref::observe( RefObserver::class );
+        
     }
 }
