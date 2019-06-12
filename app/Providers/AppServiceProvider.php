@@ -4,8 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use Illuminate\Support\Facades\Route;
-
 use App\Ref;
 
 use App\Observers\RefObserver;
@@ -21,13 +19,7 @@ class AppServiceProvider extends ServiceProvider
     {
         
        Ref::observe( new RefObserver );
-
-       Route::bind( 'refs', function( $value ) {
-
-            return Ref::where( 'slug', $value )->firstOrFail();
-
-       });
-
+        
     }
 
     /**
